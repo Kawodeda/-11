@@ -1,0 +1,63 @@
+Medicine storage:
+
+Perflufradil:
+Price 149.99
+Count 23
+Expiration time (months) 3
+
+Gadonabacasan:
+Price 389.99
+Count 1
+Expiration time (months) 1
+
+Arilotilate:
+Price 99.98
+Count 3.255
+Expiration time (months) 1
+
+Guanikefagatran:
+Price 999.99
+Count 20
+Expiration time (months) 4
+
+Calciavinspirone:
+Price 490
+Count 38
+Expiration time (months) 18
+
+Activated carbon:
+Price 39.99
+Count 160
+Expiration time (months) 80
+
+Somidralazine:
+Price 249
+Count 16
+Expiration time (months) 2
+
+Estramesine:
+Price 379
+Count 18
+Expiration time (months) 2
+
+Vingrelithiazide:
+Price 599
+Count 20
+Expiration time (months) 3
+
+Pegprosticaine:
+Price 599
+Count 30
+Expiration time (months) 1
+
+-------------------------------
+
+The most expensive medicine: Guanikefagatran Price 999.99
+
+The cheapest medicine: Activated carbon with price 39.99
+
+Total medicines: 10
+
+Medicine with more than 3 months expiration time: Guanikefagatran
+
+Total price of all medicines: 89939.4
