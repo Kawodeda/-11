@@ -6,12 +6,12 @@
 namespace qry
 {
 	template<typename TSource, typename TSelector>
-	TSource& Get(TSource* source, size_t count, bool(*operation) (TSelector, TSelector), TSelector(*selector) (TSource&))
+	TSource& GetLastSatisfyingPredicate(TSource* source, size_t count, bool(*predicate) (TSelector, TSelector), TSelector(*selector) (TSource&))
 	{
 		size_t index = 0;
 		for (size_t i = 1; i < count; ++i)
 		{
-			if (operation(selector(source[i]), selector(source[index])))
+			if (predicate(selector(source[i]), selector(source[index])))
 			{
 				index = i;
 			}
@@ -24,13 +24,13 @@ namespace qry
 	template<typename TSource, typename TSelector>
 	TSource& GetMax(TSource* source, size_t count, TSelector(*selector) (TSource&))
 	{
-		return Get<TSource, TSelector>(source, count, [](TSelector a, TSelector b) { return a > b; }, selector);
+		return GetLastSatisfyingPredicate<TSource, TSelector>(source, count, [](TSelector a, TSelector b) { return a > b; }, selector);
 	}
 
 	template<typename TSource, typename TSelector>
 	TSource& GetMin(TSource* source, size_t count, TSelector(*selector) (TSource&))
 	{
-		return Get<TSource, TSelector>(source, count, [](TSelector a, TSelector b) { return a < b; }, selector);
+		return GetLastSatisfyingPredicate<TSource, TSelector>(source, count, [](TSelector a, TSelector b) { return a < b; }, selector);
 	}
 
 	template<typename TSource>
